@@ -158,9 +158,13 @@ public class Controller implements Initializable {
                 "Let’s generate Alice's key pair, now!\n");
     }
 
-    private void Step4()throws Exception{
+    private void Step4(){
         Encrypt Aenc = new Encrypt();
-        Aenc.generateRSA();
+        try {
+            Aenc.generateRSA();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         String aPri = Aenc.privatekey;
 
         promptText.setText("Alice's RSA key pair has been generated! Take a look!" +
