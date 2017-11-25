@@ -14,7 +14,7 @@
    <children>
       <ToolBar prefHeight="30.0" prefWidth="900.0">
          <items>
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome to the Encryption Learning Software " />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome to the Encryption Learning Software" />
             <Text fx:id="nameText" strokeType="OUTSIDE" strokeWidth="0.0" />
          </items>
       </ToolBar>
@@ -63,7 +63,7 @@
                                  <children>
                                     <ToolBar prefHeight="27.0" prefWidth="200.0">
                                        <items>
-                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Bob's Screeen" />
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Bob's Screen" />
                                        </items>
                                     </ToolBar>
                                     <Text fx:id="bMess12" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="217.0" />
