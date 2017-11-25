@@ -7,6 +7,23 @@ import java.util.Scanner;
 // Public Key cryptography using the RSA algorithm.
 public class Encrypt {
 
+     String publickey;
+     String privatekey;
+
+    public Encrypt(){
+
+    }
+
+    public void generateRSA() throws Exception{
+        KeyPairGenerator keyGen = KeyPairGenerator.getInstance("RSA");
+        keyGen.initialize(1024);
+        KeyPair key = keyGen.generateKeyPair();
+        publickey = new String(key.getPublic().getEncoded());
+        privatekey = new String(key.getPrivate().getEncoded());
+
+
+    }
+
     public void message(String input) throws Exception {
 
 

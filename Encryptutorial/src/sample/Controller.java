@@ -12,6 +12,8 @@ import javafx.scene.text.Text;
 import javafx.scene.text.TextAlignment;
 
 import java.net.URL;
+import java.security.PrivateKey;
+import java.security.PublicKey;
 import java.util.ResourceBundle;
 
 public class Controller implements Initializable {
@@ -156,11 +158,16 @@ public class Controller implements Initializable {
                 "Let’s generate Alice's key pair, now!\n");
     }
 
-    private void Step4(){
+    private void Step4()throws Exception{
+        Encrypt Aenc = new Encrypt();
+        Aenc.generateRSA();
+        String aPri = Aenc.privatekey;
+
         promptText.setText("Alice's RSA key pair has been generated! Take a look!" +
                 "\n" +
                 "Just for convenience, let's show our buddy Bob's keys as well!");
-        aPriText.setText("insert key here");
+
+        aPriText.setText(aPri);
         aPubText.setText("insert key here also");
     }
 
