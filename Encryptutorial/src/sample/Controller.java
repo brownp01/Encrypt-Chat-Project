@@ -155,7 +155,7 @@ public class Controller implements Initializable {
                 "A public key, used to encrypt. You share this key with other users so they can send you encrypted messages.\n" +
                 "A private key, used to decrypt. ONLY YOU should have this key. If someone else gets access to your private key, they can decrypt messages that were meant for your eyes only.\n" +
                 "\n" +
-                "Let’s generate Alice's key pair, now!\n");
+                "Let’s generate your key pair, now!\n");
     }
 
     private void Step4(){
@@ -166,13 +166,25 @@ public class Controller implements Initializable {
             e.printStackTrace();
         }
         String aPri = Aenc.privatekey;
-
-        promptText.setText("Alice's RSA key pair has been generated! Take a look!" +
-                "\n" +
-                "Just for convenience, let's show our buddy Bob's keys as well!");
-
+        String aPub = Aenc.publickey;
         aPriText.setText(aPri);
-        aPubText.setText("insert key here also");
+        aPubText.setText(aPub);
+
+        Encrypt Benc = new Encrypt();
+        try {
+            Benc.generateRSA();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        String bPri = Benc.privatekey;
+        String bPub = Benc.publickey;
+        bPriText.setText(bPri);
+        bPubText.setText(bPub);
+        
+        promptText.setText("Your RSA key pair has been generated! Take a look!" +
+                "\n" +
+                "Just for convenience, we'll show our buddy Bob's keys as well!");
+
     }
 
     private void Step5(){
