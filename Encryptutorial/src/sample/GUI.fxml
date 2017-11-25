@@ -6,9 +6,9 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.control.ToolBar?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Text?>
-
 
 <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
    <children>
@@ -33,6 +33,30 @@
                                           <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Alice's Screen" />
                                        </items>
                                     </ToolBar>
+                                    <Text fx:id="aMess12" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="217.0" />
+                                    <Pane prefHeight="16.0" prefWidth="219.0" />
+                                    <Text fx:id="aMess11" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="217.0" />
+                                    <Pane prefHeight="16.0" prefWidth="219.0" />
+                                    <Text fx:id="aMess10" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="217.0" />
+                                    <Pane prefHeight="16.0" prefWidth="219.0" />
+                                    <Text fx:id="aMess9" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="217.0" />
+                                    <Pane prefHeight="16.0" prefWidth="219.0" />
+                                    <Text fx:id="aMess8" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="217.0" />
+                                    <Pane prefHeight="16.0" prefWidth="219.0" />
+                                    <Text fx:id="aMess7" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="217.0" />
+                                    <Pane prefHeight="16.0" prefWidth="219.0" />
+                                    <Text fx:id="aMess6" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="217.0" />
+                                    <Pane prefHeight="16.0" prefWidth="219.0" />
+                                    <Text fx:id="aMess5" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="217.0" />
+                                    <Pane prefHeight="16.0" prefWidth="219.0" />
+                                    <Text fx:id="aMess4" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="217.0" />
+                                    <Pane prefHeight="16.0" prefWidth="219.0" />
+                                    <Text fx:id="aMess3" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="217.0" />
+                                    <Pane prefHeight="16.0" prefWidth="219.0" />
+                                    <Text fx:id="aMess2" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="217.0" />
+                                    <Pane prefHeight="16.0" prefWidth="219.0" />
+                                    <Text fx:id="aMess1" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="217.0" />
+                                    <Pane prefHeight="16.0" prefWidth="219.0" />
                                  </children>
                               </VBox>
                               <VBox prefHeight="200.0" prefWidth="150.0">
@@ -42,6 +66,30 @@
                                           <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Bob's Screeen" />
                                        </items>
                                     </ToolBar>
+                                    <Text fx:id="bMess12" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="217.0" />
+                                    <Pane prefHeight="16.0" prefWidth="219.0" />
+                                    <Text fx:id="bMess11" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="217.0" />
+                                    <Pane prefHeight="16.0" prefWidth="219.0" />
+                                    <Text fx:id="bMess10" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="217.0" />
+                                    <Pane prefHeight="16.0" prefWidth="219.0" />
+                                    <Text fx:id="bMess9" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="217.0" />
+                                    <Pane prefHeight="16.0" prefWidth="219.0" />
+                                    <Text fx:id="bMess8" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="217.0" />
+                                    <Pane prefHeight="16.0" prefWidth="219.0" />
+                                    <Text fx:id="bMess7" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="217.0" />
+                                    <Pane prefHeight="16.0" prefWidth="219.0" />
+                                    <Text fx:id="bMess6" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="217.0" />
+                                    <Pane prefHeight="16.0" prefWidth="219.0" />
+                                    <Text fx:id="bMess5" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="217.0" />
+                                    <Pane prefHeight="16.0" prefWidth="219.0" />
+                                    <Text fx:id="bMess4" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="217.0" />
+                                    <Pane prefHeight="16.0" prefWidth="219.0" />
+                                    <Text fx:id="bMess3" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="217.0" />
+                                    <Pane prefHeight="16.0" prefWidth="219.0" />
+                                    <Text fx:id="bMess2" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="217.0" />
+                                    <Pane prefHeight="16.0" prefWidth="219.0" />
+                                    <Text fx:id="bMess1" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="217.0" />
+                                    <Pane prefHeight="16.0" prefWidth="219.0" />
                                  </children>
                               </VBox>
                           </items>
@@ -122,7 +170,7 @@
               <items>
                   <VBox prefHeight="200.0" prefWidth="100.0">
                      <children>
-                        <TextArea fx:id="promptText" prefHeight="260.0" prefWidth="446.0" wrapText="true" />
+                        <TextArea fx:id="promptText" editable="false" prefHeight="260.0" prefWidth="446.0" wrapText="true" />
                         <ToolBar prefHeight="40.0" prefWidth="200.0">
                           <items>
                               <TextField fx:id="entryText" prefHeight="25.0" prefWidth="344.0" />
@@ -131,7 +179,21 @@
                         </ToolBar>
                      </children>
                   </VBox>
-                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" />
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                     <children>
+                        <ToolBar prefHeight="40.0" prefWidth="446.0">
+                           <items>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Message:" />
+                           </items>
+                        </ToolBar>
+                        <TextArea fx:id="messSent" layoutY="38.0" prefHeight="111.0" prefWidth="446.0" editable="false"/>
+                        <ToolBar layoutY="149.0" prefHeight="40.0" prefWidth="446.0">
+                           <items>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Encrypted Message:" />
+                           </items>
+                        </ToolBar>
+                        <TextArea fx:id="encryptedMess" layoutY="189.0" prefHeight="94.0" prefWidth="446.0" editable="false"/>
+                     </children></AnchorPane>
               </items>
             </SplitPane>
         </items>

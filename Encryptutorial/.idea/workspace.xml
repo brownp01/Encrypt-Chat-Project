@@ -63,10 +63,7 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="200">
               <caret line="5" column="26" lean-forward="false" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="26" />
-              <folding>
-                <element signature="e#502#503#0" expanded="true" />
-                <element signature="e#577#578#0" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -89,8 +86,8 @@
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="12" column="238" lean-forward="false" selection-start-line="12" selection-start-column="238" selection-end-line="12" selection-end-column="238" />
+            <state relative-caret-position="1395">
+              <caret line="202" column="0" lean-forward="true" selection-start-line="202" selection-start-column="0" selection-end-line="202" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -99,12 +96,24 @@
       <file leaf-file-name="Controller.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/sample/Controller.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-829">
-              <caret line="15" column="4" lean-forward="false" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
+            <state relative-caret-position="689">
+              <caret line="223" column="25" lean-forward="false" selection-start-line="223" selection-start-column="25" selection-end-line="223" selection-end-column="25" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1127#1128#0" expanded="true" />
-                <element signature="e#1172#1173#0" expanded="true" />
+                <element signature="method#initialize#0;class#Controller#0" expanded="false" />
+                <element signature="e#2039#2114#0" expanded="false" />
+                <element signature="method#Step0#0;class#Controller#0" expanded="false" />
+                <element signature="method#Step1#0;class#Controller#0" expanded="false" />
+                <element signature="method#Step2#0;class#Controller#0" expanded="false" />
+                <element signature="method#Step3#0;class#Controller#0" expanded="false" />
+                <element signature="method#Step4#0;class#Controller#0" expanded="false" />
+                <element signature="method#Step5#0;class#Controller#0" expanded="false" />
+                <element signature="method#Step6#0;class#Controller#0" expanded="false" />
+                <element signature="method#Step7#0;class#Controller#0" expanded="false" />
+                <element signature="method#Step8#0;class#Controller#0" expanded="false" />
+                <element signature="method#Step9#0;class#Controller#0" expanded="false" />
+                <element signature="method#Step10#0;class#Controller#0" expanded="false" />
+                <element signature="method#Step11#0;class#Controller#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -135,9 +144,9 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/sample/GUI.fxml" />
         <option value="$PROJECT_DIR$/src/sample/GUIMain.java" />
         <option value="$PROJECT_DIR$/src/sample/Main.java" />
+        <option value="$PROJECT_DIR$/src/sample/GUI.fxml" />
         <option value="$PROJECT_DIR$/src/sample/Controller.java" />
       </list>
     </option>
@@ -150,8 +159,8 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="1906" />
-    <option name="width" value="1948" />
+    <option name="x" value="-14" />
+    <option name="width" value="1955" />
     <option name="height" value="2074" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -173,9 +182,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
@@ -199,6 +205,9 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -360,15 +369,15 @@
       <workItem from="1511234008946" duration="59000" />
       <workItem from="1511324619962" duration="1727000" />
       <workItem from="1511349265485" duration="2052000" />
+      <workItem from="1511579443532" duration="8893000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6412000" />
+    <option name="totallyTimeSpent" value="15305000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1906" y="0" width="1948" height="2074" extended-state="0" />
-    <editor active="true" />
+    <frame x="-14" y="0" width="1955" height="2074" extended-state="0" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -379,11 +388,11 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32968238" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32694414" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32693362" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20563674" sideWeight="0.6703755" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2048882" sideWeight="0.6703755" order="3" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -420,7 +429,9 @@
     <option name="LAST_COMMIT_MESSAGE" value="Made a very basic GUI with sort of an idea of what we would want it to look like? Code has literally nothing in it yet." />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="4" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="antWorkspaceConfiguration">
@@ -431,11 +442,61 @@
     <entry file="file://$PROJECT_DIR$/src/sample/GUIMain.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="200">
-          <caret line="10" column="18" lean-forward="false" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
+          <caret line="5" column="26" lean-forward="false" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
           <folding>
-            <element signature="e#502#503#0" expanded="true" />
-            <element signature="e#577#578#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/GUI.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="12" column="238" lean-forward="false" selection-start-line="12" selection-start-column="238" selection-end-line="12" selection-end-column="238" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/Controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#initialize#0;class#Controller#0" expanded="false" />
+            <element signature="e#2039#2114#0" expanded="false" />
+            <element signature="method#Step0#0;class#Controller#0" expanded="false" />
+            <element signature="method#Step1#0;class#Controller#0" expanded="false" />
+            <element signature="method#Step2#0;class#Controller#0" expanded="false" />
+            <element signature="method#Step3#0;class#Controller#0" expanded="false" />
+            <element signature="method#Step4#0;class#Controller#0" expanded="false" />
+            <element signature="method#Step5#0;class#Controller#0" expanded="false" />
+            <element signature="method#Step6#0;class#Controller#0" expanded="false" />
+            <element signature="method#Step7#0;class#Controller#0" expanded="false" />
+            <element signature="method#Step8#0;class#Controller#0" expanded="false" />
+            <element signature="method#Step9#0;class#Controller#0" expanded="false" />
+            <element signature="method#Step10#0;class#Controller#0" expanded="false" />
+            <element signature="method#Step11#0;class#Controller#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/GUIMain.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="10" column="18" lean-forward="false" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -456,8 +517,20 @@
           <caret line="35" column="27" lean-forward="false" selection-start-line="35" selection-start-column="27" selection-end-line="35" selection-end-column="27" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1127#1128#0" expanded="true" />
-            <element signature="e#1172#1173#0" expanded="true" />
+            <element signature="method#initialize#0;class#Controller#0" expanded="false" />
+            <element signature="e#2039#2114#0" expanded="false" />
+            <element signature="method#Step0#0;class#Controller#0" expanded="false" />
+            <element signature="method#Step1#0;class#Controller#0" expanded="false" />
+            <element signature="method#Step2#0;class#Controller#0" expanded="false" />
+            <element signature="method#Step3#0;class#Controller#0" expanded="false" />
+            <element signature="method#Step4#0;class#Controller#0" expanded="false" />
+            <element signature="method#Step5#0;class#Controller#0" expanded="false" />
+            <element signature="method#Step6#0;class#Controller#0" expanded="false" />
+            <element signature="method#Step7#0;class#Controller#0" expanded="false" />
+            <element signature="method#Step8#0;class#Controller#0" expanded="false" />
+            <element signature="method#Step9#0;class#Controller#0" expanded="false" />
+            <element signature="method#Step10#0;class#Controller#0" expanded="false" />
+            <element signature="method#Step11#0;class#Controller#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -466,10 +539,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="680">
           <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-          <folding>
-            <element signature="e#502#503#0" expanded="true" />
-            <element signature="e#577#578#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -479,8 +549,20 @@
           <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1127#1128#0" expanded="true" />
-            <element signature="e#1172#1173#0" expanded="true" />
+            <element signature="method#initialize#0;class#Controller#0" expanded="false" />
+            <element signature="e#2039#2114#0" expanded="false" />
+            <element signature="method#Step0#0;class#Controller#0" expanded="false" />
+            <element signature="method#Step1#0;class#Controller#0" expanded="false" />
+            <element signature="method#Step2#0;class#Controller#0" expanded="false" />
+            <element signature="method#Step3#0;class#Controller#0" expanded="false" />
+            <element signature="method#Step4#0;class#Controller#0" expanded="false" />
+            <element signature="method#Step5#0;class#Controller#0" expanded="false" />
+            <element signature="method#Step6#0;class#Controller#0" expanded="false" />
+            <element signature="method#Step7#0;class#Controller#0" expanded="false" />
+            <element signature="method#Step8#0;class#Controller#0" expanded="false" />
+            <element signature="method#Step9#0;class#Controller#0" expanded="false" />
+            <element signature="method#Step10#0;class#Controller#0" expanded="false" />
+            <element signature="method#Step11#0;class#Controller#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -500,10 +582,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="680">
           <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-          <folding>
-            <element signature="e#502#503#0" expanded="true" />
-            <element signature="e#577#578#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -513,8 +592,20 @@
           <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1127#1128#0" expanded="true" />
-            <element signature="e#1172#1173#0" expanded="true" />
+            <element signature="method#initialize#0;class#Controller#0" expanded="false" />
+            <element signature="e#2039#2114#0" expanded="false" />
+            <element signature="method#Step0#0;class#Controller#0" expanded="false" />
+            <element signature="method#Step1#0;class#Controller#0" expanded="false" />
+            <element signature="method#Step2#0;class#Controller#0" expanded="false" />
+            <element signature="method#Step3#0;class#Controller#0" expanded="false" />
+            <element signature="method#Step4#0;class#Controller#0" expanded="false" />
+            <element signature="method#Step5#0;class#Controller#0" expanded="false" />
+            <element signature="method#Step6#0;class#Controller#0" expanded="false" />
+            <element signature="method#Step7#0;class#Controller#0" expanded="false" />
+            <element signature="method#Step8#0;class#Controller#0" expanded="false" />
+            <element signature="method#Step9#0;class#Controller#0" expanded="false" />
+            <element signature="method#Step10#0;class#Controller#0" expanded="false" />
+            <element signature="method#Step11#0;class#Controller#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -534,10 +625,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="160">
           <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding>
-            <element signature="e#502#503#0" expanded="true" />
-            <element signature="e#577#578#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -548,8 +636,20 @@
           <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1127#1128#0" expanded="true" />
-            <element signature="e#1172#1173#0" expanded="true" />
+            <element signature="method#initialize#0;class#Controller#0" expanded="false" />
+            <element signature="e#2039#2114#0" expanded="false" />
+            <element signature="method#Step0#0;class#Controller#0" expanded="false" />
+            <element signature="method#Step1#0;class#Controller#0" expanded="false" />
+            <element signature="method#Step2#0;class#Controller#0" expanded="false" />
+            <element signature="method#Step3#0;class#Controller#0" expanded="false" />
+            <element signature="method#Step4#0;class#Controller#0" expanded="false" />
+            <element signature="method#Step5#0;class#Controller#0" expanded="false" />
+            <element signature="method#Step6#0;class#Controller#0" expanded="false" />
+            <element signature="method#Step7#0;class#Controller#0" expanded="false" />
+            <element signature="method#Step8#0;class#Controller#0" expanded="false" />
+            <element signature="method#Step9#0;class#Controller#0" expanded="false" />
+            <element signature="method#Step10#0;class#Controller#0" expanded="false" />
+            <element signature="method#Step11#0;class#Controller#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -563,13 +663,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/GUI.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
+    <entry file="file://$PROJECT_DIR$/src/sample/GUIMain.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="12" column="238" lean-forward="false" selection-start-line="12" selection-start-column="238" selection-end-line="12" selection-end-column="238" />
+        <state relative-caret-position="200">
+          <caret line="5" column="26" lean-forward="false" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="26" />
           <folding />
         </state>
       </provider>
@@ -584,25 +681,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/GUIMain.java">
+    <entry file="file://$PROJECT_DIR$/src/sample/GUI.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="5" column="26" lean-forward="false" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="26" />
-          <folding>
-            <element signature="e#502#503#0" expanded="true" />
-            <element signature="e#577#578#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="1395">
+          <caret line="202" column="0" lean-forward="true" selection-start-line="202" selection-start-column="0" selection-end-line="202" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/Controller.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-829">
-          <caret line="15" column="4" lean-forward="false" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
+        <state relative-caret-position="689">
+          <caret line="223" column="25" lean-forward="false" selection-start-line="223" selection-start-column="25" selection-end-line="223" selection-end-column="25" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1127#1128#0" expanded="true" />
-            <element signature="e#1172#1173#0" expanded="true" />
+            <element signature="method#initialize#0;class#Controller#0" expanded="false" />
+            <element signature="e#2039#2114#0" expanded="false" />
+            <element signature="method#Step0#0;class#Controller#0" expanded="false" />
+            <element signature="method#Step1#0;class#Controller#0" expanded="false" />
+            <element signature="method#Step2#0;class#Controller#0" expanded="false" />
+            <element signature="method#Step3#0;class#Controller#0" expanded="false" />
+            <element signature="method#Step4#0;class#Controller#0" expanded="false" />
+            <element signature="method#Step5#0;class#Controller#0" expanded="false" />
+            <element signature="method#Step6#0;class#Controller#0" expanded="false" />
+            <element signature="method#Step7#0;class#Controller#0" expanded="false" />
+            <element signature="method#Step8#0;class#Controller#0" expanded="false" />
+            <element signature="method#Step9#0;class#Controller#0" expanded="false" />
+            <element signature="method#Step10#0;class#Controller#0" expanded="false" />
+            <element signature="method#Step11#0;class#Controller#0" expanded="false" />
           </folding>
         </state>
       </provider>
