@@ -3,6 +3,8 @@ import java.security.*;
 import javax.crypto.*;
 import java.util.Scanner;
 
+import java.util.Base64;
+
 //
 // Public Key cryptography using the RSA algorithm.
 public class Encrypt {
@@ -10,19 +12,55 @@ public class Encrypt {
      String publickey;
      String privatekey;
 
-    public Encrypt(){
+    public Encrypt(){}
+
+
+    // function to encrypt a message
+    // pass public key to encrypt with and message to encrypt
+    public void encrypt(String message, PublicKey pk){
 
     }
 
-    public void generateRSA() throws Exception{
+
+    // function to decrypt a message
+    // pass private key to decrypt with and message to decrypt
+    public void decrypt(String message, PublicKey pk){
+
+    }
+
+    // generate keypair
+    // returns new key pair
+    public KeyPair generateRSA() throws Exception{
         KeyPairGenerator keyGen = KeyPairGenerator.getInstance("RSA");
         keyGen.initialize(1024);
         KeyPair key = keyGen.generateKeyPair();
-        publickey = new String(key.getPublic().getEncoded());
-        privatekey = new String(key.getPrivate().getEncoded());
+        //publickey = new String(key.getPublic().getEncoded());
+        //privatekey = new String(key.getPrivate().getEncoded());
 
+        Base64.Encoder encoder = Base64.getEncoder();
+        privatekey = encoder.encodeToString(key.getPrivate().getEncoded());
+        publickey = encoder.encodeToString(key.getPublic().getEncoded());
+
+        return key;
 
     }
+
+
+    // get public key from a KeyPair object
+    // return public key encoded as string
+    public String publicToString(KeyPair keypair){
+        Base64.Encoder encoder = Base64.getEncoder();
+        return encoder.encodeToString(keypair.getPublic().getEncoded());
+    }
+
+
+    // get private key from a KeyPair object
+    // return private key encoded as string
+    public String privateToString(KeyPair keypair){
+        Base64.Encoder encoder = Base64.getEncoder();
+        return encoder.encodeToString(keypair.getPrivate().getEncoded());
+    }
+
 
     public void message(String input) throws Exception {
 
