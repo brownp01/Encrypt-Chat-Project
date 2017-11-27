@@ -10,7 +10,6 @@ import javafx.scene.control.TextField;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Text;
 import javafx.scene.text.TextAlignment;
-
 import java.net.URL;
 import java.security.*;
 import java.util.ResourceBundle;
@@ -21,7 +20,9 @@ public class Controller implements Initializable {
     KeyPair userKeyPair;
     KeyPair bobKeyPair;
     String message;
-    String encryptedMessage; // not sure this will be a string or object?
+    byte[] eMessage; // not sure this will be a string or object?
+    String decryptedMessage;
+    Encrypt enc = new Encrypt();
 
     private int step = 0;
     private String answers;
@@ -172,7 +173,7 @@ public class Controller implements Initializable {
     }
 
     private void Step4(){
-        Encrypt enc = new Encrypt();
+
         try {
             userKeyPair = enc.generateRSA(); // generate user's key pair
         } catch (Exception e) {
@@ -208,6 +209,7 @@ public class Controller implements Initializable {
 
     private void Step6(){
         messSent.setText(entryText.getText());
+        message = messSent.getText();
         entryText.setText("");
         promptText.setText("To ensure nobody but Bob can read the contents of your message, let’s encrypt it!\n\n" +
                 "Which key are we going to encrypt with?\n" +
@@ -238,12 +240,26 @@ public class Controller implements Initializable {
     private void Step8(){
         promptText.setText("We have a database of all of our users’ public keys.\n\n" +
                 "We'll retrieve Bob’s public key and use it to encrypt your message.");
+
     }
 
     private void Step9(){
+
+        try {
+            eMessage = enc.encrypt(message, bobKeyPair);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        try {
+        encryptedMess.setText(new String(eMessage, "UTF8"));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
         promptText.setText("Your message has been encrypted!\n\n" +
                 "Check out the original and encrypted versions.");
-        encryptedMess.setText("Insert encrypted version here! :)");
+
+
     }
 
     private void Step10(){
@@ -269,15 +285,22 @@ public class Controller implements Initializable {
         }
         entryText.setText("");
         aMess1.setFill(Color.BLUE);
-        aMess1.setText(messSent.getText());
+        aMess1.setText(message);
         aMess1.setTextAlignment(TextAlignment.RIGHT);
         bMess1.setFill(Color.BLACK);
-        bMess1.setText(messSent.getText());
+
+        try {
+            decryptedMessage = enc.decrypt(eMessage, bobKeyPair);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        bMess1.setText(decryptedMessage);
         bMess1.setTextAlignment(TextAlignment.LEFT);
 
     }
 
     private void Step12(){
+
         promptText.setText("Bob has sent you a message! \n\nSee the encrypted message below.");
         encryptedMess.setText("Insert encrypted message here");
         messSent.setText("");

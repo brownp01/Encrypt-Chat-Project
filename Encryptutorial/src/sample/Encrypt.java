@@ -1,4 +1,6 @@
 package sample;
+import java.nio.charset.Charset;
+import java.nio.charset.StandardCharsets;
 import java.security.*;
 import javax.crypto.*;
 import java.util.Scanner;
@@ -11,20 +13,35 @@ public class Encrypt {
 
      String publickey;
      String privatekey;
+     Cipher cipher;
+     byte[] cipherText;
 
     public Encrypt(){}
 
 
     // function to encrypt a message
     // pass public key to encrypt with and message to encrypt
-    public void encrypt(String message, PublicKey pk){
+    public byte[] encrypt(String message, KeyPair pk) throws Exception{
+
+
+        byte[] plainText = message.getBytes("UTF8");
+        cipher = Cipher.getInstance("RSA/ECB/PKCS1Padding");
+        cipher.init(Cipher.ENCRYPT_MODE, pk.getPublic());
+        cipherText = cipher.doFinal(plainText);
+
+        return cipherText;
 
     }
 
 
     // function to decrypt a message
     // pass private key to decrypt with and message to decrypt
-    public void decrypt(String message, PublicKey pk){
+    public String decrypt(byte[] message, KeyPair pk) throws Exception{
+
+        cipher.init(Cipher.DECRYPT_MODE, pk.getPrivate());
+        byte[] newPlainText = cipher.doFinal(message);
+
+        return new String(newPlainText, "UTF8");
 
     }
 
