@@ -363,8 +363,8 @@ public class Controller implements Initializable {
         aMess2.setText(decryptedMessage);
         aMess2.setTextAlignment(TextAlignment.RIGHT);
         bMess2.setFill(Color.BLACK);
-        bMess1.setText(message);
-        bMess1.setTextAlignment(TextAlignment.LEFT);
+        bMess2.setText(message);
+        bMess2.setTextAlignment(TextAlignment.LEFT);
     }
 
     private void Step16(){
