@@ -142,6 +142,12 @@ public class Controller implements Initializable {
                 break;
             case 16: Step16();
                 break;
+            case 17: Step17();
+                break;
+            case 18: Step18();
+                break;
+            case 19: Step19();
+                break;
         }
     }
 
@@ -301,7 +307,7 @@ public class Controller implements Initializable {
 
     private void Step12(){
 
-        message = "Hey! What's your email and phone number?";
+        message = "Hey! What's your email and phone number?"; //Bob's response
 
         //encrypt message
         try {
@@ -352,11 +358,43 @@ public class Controller implements Initializable {
             e.printStackTrace();
         }
         messSent.setText(decryptedMessage);
+        encryptedMess.setText("");
     }
 
     private void Step16(){
         promptText.setText("Let's send Bob a response!\n\n" +
                 "Enter a response to send Bob below.");
+    }
+
+    private void Step17() {
+        messSent.setText(entryText.getText());
+        message = messSent.getText();
+        entryText.setText("");
+        promptText.setText("Looks like your response contains some sensitive information. Good thing we can encrypt the message so only Bob could read it!\n\n\n" +
+                "How should we encrypt this message for Bob?\n" +
+                "a. Bob’s public key\n" +
+                "b. Bob’s private key\n" +
+                "c. Your public key\n" +
+                "d. Your private key\n");
+    }
+
+    private void Step18(){
+        answers = entryText.getText();
+        if( answers.equals("a") || answers.equals("a.") || answers.equals("A") || answers.equals("A."))
+        {
+            promptText.setText("Correct! We’ll encrypt it using Bob’s public key so only Bob can decrypt it.\n");
+            entryText.setText("");
+        } else
+        {
+            promptText.setText("Not quite! The message should be encrypted using Bob’s public key.\n");
+            entryText.setText("");
+        }
+
+    }
+
+    private void Step19(){
+
+       Step9();
     }
 
 }
