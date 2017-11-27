@@ -12,11 +12,16 @@ import javafx.scene.text.Text;
 import javafx.scene.text.TextAlignment;
 
 import java.net.URL;
-import java.security.PrivateKey;
-import java.security.PublicKey;
+import java.security.*;
 import java.util.ResourceBundle;
 
 public class Controller implements Initializable {
+
+    // global variables to hold keys and messages
+    KeyPair userKeyPair;
+    KeyPair bobKeyPair;
+    String message;
+    String encryptedMessage; // not sure this will be a string or object?
 
     private int step = 0;
     private String answers;
@@ -92,7 +97,7 @@ public class Controller implements Initializable {
 
     public void initialize(URL fxmlFileLocation, ResourceBundle resources) {
 
-        promptText.setText("Welcome to the Simulated Encrypted Chat program, an educational tool for understanding encryption! \n\n Please enter your name below.");
+        promptText.setText("Welcome to the Simulated Encrypted Chat program, an educational tool for understanding encryption! \n\nPlease enter your name below.");
 
         nextButton.setOnAction(e -> {
                 runStep(step);
@@ -128,6 +133,14 @@ public class Controller implements Initializable {
                     break;
             case 12: Step12();
                     break;
+            case 13: Step13();
+                break;
+            case 14: Step14();
+                break;
+            case 15: Step15();
+                break;
+            case 16: Step16();
+                break;
         }
     }
 
@@ -140,7 +153,7 @@ public class Controller implements Initializable {
     }
 
     private void Step1(){
-        promptText.setText("As a dedicated protector of privacy, this program strives to deliver effective chat encryption so information is only accessible by intended recipients. \n\n Let’s get started!");
+        promptText.setText("As a dedicated protector of privacy, this program strives to deliver effective chat encryption so information is only accessible by intended recipients. \n\nLet’s get started!");
     }
 
     private void Step2(){
@@ -159,31 +172,31 @@ public class Controller implements Initializable {
     }
 
     private void Step4(){
-        Encrypt Aenc = new Encrypt();
+        Encrypt enc = new Encrypt();
         try {
-            Aenc.generateRSA();
+            userKeyPair = enc.generateRSA(); // generate user's key pair
         } catch (Exception e) {
             e.printStackTrace();
         }
-        String aPri = Aenc.privatekey;
-        String aPub = Aenc.publickey;
-        aPriText.setText(aPri);
-        aPubText.setText(aPub);
+        //String aPri = Aenc.privatekey;
+        //String aPub = Aenc.publickey;
+        aPriText.setText(enc.privateToString(userKeyPair));
+        aPubText.setText(enc.publicToString(userKeyPair));
 
-        Encrypt Benc = new Encrypt();
+        //Encrypt Benc = new Encrypt();
         try {
-            Benc.generateRSA();
+            bobKeyPair = enc.generateRSA(); // generate bob's key pair
         } catch (Exception e) {
             e.printStackTrace();
         }
-        String bPri = Benc.privatekey;
-        String bPub = Benc.publickey;
-        bPriText.setText(bPri);
-        bPubText.setText(bPub);
+        //String bPri = Benc.privatekey;
+        //String bPub = Benc.publickey;
+        bPriText.setText(enc.privateToString(bobKeyPair));
+        bPubText.setText(enc.publicToString(bobKeyPair));
 
-        promptText.setText("Your RSA key pair has been generated! Take a look!" +
+        promptText.setText("Your RSA key pair has been generated! Take a look!\n" +
                 "\n" +
-                "For learning purposes, we'll show Bob's keys as well!");
+                "For learning purposes, we've displayed Bob's key pair as well.");
 
     }
 
@@ -209,8 +222,8 @@ public class Controller implements Initializable {
         if( answers.equals("a") || answers.equals("a.") || answers.equals("A") || answers.equals("A."))
         {
             promptText.setText("Correct! The message should be encrypted using Bob’s public key.\n\n" +
-                    "Then the message can only be decrypted with Bob’s private key, which only Bob should have.\n" +
-                    "This ensures only Bob will be able to decode your message. \n");
+                    "Then the message can only be decrypted with Bob’s private key, which only Bob should have." +
+                    " This ensures only Bob will be able to decode your message. \n");
             entryText.setText("");
         } else
         {
@@ -223,12 +236,12 @@ public class Controller implements Initializable {
     }
 
     private void Step8(){
-        promptText.setText("We have a database of all of our users’ public keys.\n" +
-                "We will retrieve Bob’s public key and use it to encrypt your message.");
+        promptText.setText("We have a database of all of our users’ public keys.\n\n" +
+                "We'll retrieve Bob’s public key and use it to encrypt your message.");
     }
 
     private void Step9(){
-        promptText.setText("Your message has been encrypted!\n" +
+        promptText.setText("Your message has been encrypted!\n\n" +
                 "Check out the original and encrypted versions.");
         encryptedMess.setText("Insert encrypted version here! :)");
     }
@@ -240,6 +253,9 @@ public class Controller implements Initializable {
                 "b. Bob’s private key\n" +
                 "c. Your public key\n" +
                 "d. Your private key\n");
+        encryptedMess.setText("");
+        messSent.setText("");
+
     }
 
     private void Step11(){
@@ -262,6 +278,41 @@ public class Controller implements Initializable {
     }
 
     private void Step12(){
-        promptText.setText("Bob has sent you a message!");
+        promptText.setText("Bob has sent you a message! \n\nSee the encrypted message below.");
+        encryptedMess.setText("Insert encrypted message here");
+        messSent.setText("");
+
     }
+
+    private void Step13(){
+        promptText.setText("Which key should we use to decrypt Bob's message?\n" +
+                "a. Bob’s public key\n" +
+                "b. Bob’s private key\n" +
+                "c. Your public key\n" +
+                "d. Your private key\n");
+    }
+
+    private void Step14(){
+        answers = entryText.getText();
+        if( answers.equals("d") || answers.equals("d.") || answers.equals("D") || answers.equals("D."))
+        {
+            promptText.setText("Correct! \n\nSince Bob's message was encrypted for your eyes only, the only way to decrypt it is using your private key.");
+            entryText.setText("");
+        } else {
+            promptText.setText("Not quite! \n\nSince Bob's message was encrypted for your eyes only, the only way to decrypt it is using your private key.");
+            entryText.setText("");
+        }
+    }
+
+    private void Step15(){
+        promptText.setText("Bob's message has been decrypted!\n\n" +
+                "Check out the decrypted message below.");
+        messSent.setText("Insert decrypted message here!");
+    }
+
+    private void Step16(){
+        promptText.setText("Let's send Bob a response!\n\n" +
+                "Enter a response to send Bob below.");
+    }
+
 }

@@ -11,7 +11,7 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("GUI.fxml"));
-        primaryStage.setTitle("Hello World");
+        primaryStage.setTitle("Simulated Encrypted Chat");
         primaryStage.setScene(new Scene(root, 640, 400));
         primaryStage.show();
     }
