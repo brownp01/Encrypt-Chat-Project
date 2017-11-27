@@ -301,8 +301,22 @@ public class Controller implements Initializable {
 
     private void Step12(){
 
+        message = "Hey! What's your email and phone number?";
+
+        //encrypt message
+        try {
+            eMessage = enc.encrypt(message, userKeyPair);  //encrypted message in byte format for decrypt function later
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
         promptText.setText("Bob has sent you a message! \n\nSee the encrypted message below.");
-        encryptedMess.setText("Insert encrypted message here");
+
+        try {
+            encryptedMess.setText(new String(eMessage, "UTF8")); //message is converted to string
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         messSent.setText("");
 
     }
@@ -330,7 +344,14 @@ public class Controller implements Initializable {
     private void Step15(){
         promptText.setText("Bob's message has been decrypted!\n\n" +
                 "Check out the decrypted message below.");
-        messSent.setText("Insert decrypted message here!");
+
+        //decrypt message
+        try {
+            decryptedMessage = enc.decrypt(eMessage, userKeyPair);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        messSent.setText(decryptedMessage);
     }
 
     private void Step16(){
