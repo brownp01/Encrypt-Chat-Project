@@ -11,15 +11,14 @@ import java.util.Base64;
 // Public Key cryptography using the RSA algorithm.
 public class Encrypt {
 
-     String publickey;
-     String privatekey;
-     Cipher cipher;
+     Cipher cipher; //cipher object
      byte[] cipherText; //encrypted message stored in byte format
 
     public Encrypt(){}
 
     // function to encrypt a message
-    // pass public key to encrypt with and message to encrypt
+    // pass KeyPair to encrypt with and message to encrypt
+    // return encrypted message in byte format
     public byte[] encrypt(String message, KeyPair pk) throws Exception{
 
 
@@ -29,18 +28,17 @@ public class Encrypt {
         cipherText = cipher.doFinal(plainText);
 
         return cipherText;
-
     }
 
     // function to decrypt a message
-    // pass private key to decrypt with and message to decrypt
+    // pass KeyPair to decrypt with and message in byte format to decrypt
+    // return decrypted message as a string
     public String decrypt(byte[] message, KeyPair pk) throws Exception{
 
         cipher.init(Cipher.DECRYPT_MODE, pk.getPrivate());
-        byte[] newPlainText = cipher.doFinal(message);
+        byte[] newPlainText = cipher.doFinal(message);  //Here is where encrypted message is required in byte format for Cipher
 
         return new String(newPlainText, "UTF8");
-
     }
 
     // generate keypair
@@ -51,12 +49,7 @@ public class Encrypt {
         keyGen.initialize(1024);
         KeyPair key = keyGen.generateKeyPair();
 
-        Base64.Encoder encoder = Base64.getEncoder();
-        privatekey = encoder.encodeToString(key.getPrivate().getEncoded());
-        publickey = encoder.encodeToString(key.getPublic().getEncoded());
-
         return key;
-
     }
 
     // get public key from a KeyPair object
