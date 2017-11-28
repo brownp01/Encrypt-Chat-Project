@@ -14,7 +14,7 @@
    <children>
       <ToolBar prefHeight="30.0" prefWidth="900.0">
          <items>
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome to the Encryption Learning Software " />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome to the Encryption Learning Software" />
             <Text fx:id="nameText" strokeType="OUTSIDE" strokeWidth="0.0" />
          </items>
       </ToolBar>
@@ -30,7 +30,7 @@
                                  <children>
                                     <ToolBar prefHeight="27.0" prefWidth="200.0">
                                        <items>
-                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Alice's Screen" />
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Your Screen" />
                                        </items>
                                     </ToolBar>
                                     <Text fx:id="aMess12" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="217.0" />
@@ -63,7 +63,7 @@
                                  <children>
                                     <ToolBar prefHeight="27.0" prefWidth="200.0">
                                        <items>
-                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Bob's Screeen" />
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Bob's Screen" />
                                        </items>
                                     </ToolBar>
                                     <Text fx:id="bMess12" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="217.0" />
@@ -102,7 +102,7 @@
                                        <children>
                                           <ToolBar prefHeight="40.0" prefWidth="200.0">
                                              <items>
-                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Alice's Public Key" />
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Your Public Key" />
                                              </items>
                                           </ToolBar>
                                           <ToolBar prefHeight="40.0" prefWidth="200.0">
@@ -116,7 +116,7 @@
                                        <children>
                                           <ToolBar prefHeight="40.0" prefWidth="200.0">
                                              <items>
-                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Alice's Private Key" />
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Your Private Key" />
                                              </items>
                                           </ToolBar>
                                           <ToolBar prefHeight="40.0" prefWidth="200.0">
@@ -186,13 +186,13 @@
                               <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Message:" />
                            </items>
                         </ToolBar>
-                        <TextArea fx:id="messSent" layoutY="38.0" prefHeight="111.0" prefWidth="446.0" editable="false"/>
+                        <TextArea fx:id="messSent" layoutY="38.0" prefHeight="111.0" prefWidth="446.0" editable="false" wrapText="true"/>
                         <ToolBar layoutY="149.0" prefHeight="40.0" prefWidth="446.0">
                            <items>
                               <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Encrypted Message:" />
                            </items>
                         </ToolBar>
-                        <TextArea fx:id="encryptedMess" layoutY="189.0" prefHeight="94.0" prefWidth="446.0" editable="false"/>
+                        <TextArea fx:id="encryptedMess" layoutY="189.0" prefHeight="94.0" prefWidth="446.0" editable="false" wrapText="true"/>
                      </children></AnchorPane>
               </items>
             </SplitPane>

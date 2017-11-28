@@ -375,12 +375,20 @@ public class Controller implements Initializable {
         }
         messSent.setText(decryptedMessage);
         encryptedMess.setText("");
+
         aMess2.setFill(Color.BLUE);
-        aMess2.setText(decryptedMessage);
+        aMess2.setText(aMess1.getText());
         aMess2.setTextAlignment(TextAlignment.RIGHT);
         bMess2.setFill(Color.BLACK);
-        bMess2.setText(message);
+        bMess2.setText(bMess1.getText());
         bMess2.setTextAlignment(TextAlignment.LEFT);
+
+        aMess1.setFill(Color.BLACK);
+        aMess1.setText(decryptedMessage);
+        aMess1.setTextAlignment(TextAlignment.LEFT);
+        bMess1.setFill(Color.BLUE);
+        bMess1.setText(message);
+        bMess1.setTextAlignment(TextAlignment.RIGHT);
     }
 
     private void Step16(){
@@ -423,6 +431,28 @@ public class Controller implements Initializable {
     private void Step20(){
 
         promptText.setText("Your message has been sent to Bob!\n");
+        
+        aMess3.setFill(Color.BLUE);
+        aMess3.setText(aMess2.getText());
+        aMess3.setTextAlignment(TextAlignment.RIGHT);
+        bMess3.setFill(Color.BLACK);
+        bMess3.setText(bMess2.getText());
+        bMess3.setTextAlignment(TextAlignment.LEFT);
+
+        aMess2.setFill(Color.BLACK);
+        aMess2.setText(aMess1.getText());
+        aMess2.setTextAlignment(TextAlignment.LEFT);
+        bMess2.setFill(Color.BLUE);
+        bMess2.setText(bMess1.getText());
+        bMess2.setTextAlignment(TextAlignment.RIGHT);
+
+        aMess1.setFill(Color.BLUE);
+        aMess1.setText(messSent.getText());
+        aMess1.setTextAlignment(TextAlignment.RIGHT);
+        bMess1.setFill(Color.BLACK);
+        bMess1.setText(messSent.getText());
+        bMess1.setTextAlignment(TextAlignment.LEFT);
+
         messSent.setText("");
         encryptedMess.setText("");
 
@@ -491,7 +521,8 @@ public class Controller implements Initializable {
 
         promptText.setText("Bob is signing off!\n\n" +
                 "Hopefully you now understand how encryption works and realize its importance!\n\n" +
-                "Come back soon, " + username + "!");
+                "Come back soon, " + username + "! \n \n" +
+                " You may now close the software.");
 
     }
 }
