@@ -10,6 +10,8 @@ import javafx.scene.control.TextField;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Text;
 import javafx.scene.text.TextAlignment;
+
+import java.io.UnsupportedEncodingException;
 import java.net.URL;
 import java.security.*;
 import java.util.ResourceBundle;
@@ -23,6 +25,7 @@ public class Controller implements Initializable {
     byte[] eMessage; // store encrypted message in byte format. Required for Cipher object in Encrypt Class
     String decryptedMessage; //decrypted message in string format
     Encrypt enc = new Encrypt(); //Encrypt object
+    String username;
 
     private int step = 0;
     private String answers;
@@ -148,11 +151,24 @@ public class Controller implements Initializable {
                 break;
             case 19: Step19();
                 break;
+            case 20: Step20();
+                break;
+            case 21: Step21();
+                break;
+            case 22: Step22();
+                break;
+            case 23: Step23();
+                break;
+            case 24: Step24();
+                break;
+            case 25: Step25();
+                break;
+            case 26: Step26();
+                break;
         }
     }
 
     private void Step0(){
-        String username;
         username = entryText.getText();
         nameText.setText(username + " !");
         promptText.setText("Hi, " + username + "!  \n\n" + "Encryption is the process of encoding information so only authorized parties can access it. Encryption does NOT prevent your message from being intercepted by the privacy invaders of the Internet. However, encryption does ensure that only the intended recipient(s) will be able to decode your message.");
@@ -401,6 +417,81 @@ public class Controller implements Initializable {
     private void Step19(){
 
        Step9();
+
     }
 
+    private void Step20(){
+
+        promptText.setText("Your message has been sent to Bob!\n");
+        messSent.setText("");
+        encryptedMess.setText("");
+
+    }
+
+    private void Step21(){
+
+        promptText.setText("----------------- WARNING! -----------------\n\n" +
+                "Uh oh! The notorious hacker Alice is up to her evil tricks, again!\n" +
+                "Looks like she has used a packet sniffing software to intercept your message to Bob!\n");
+    }
+
+    private void Step22(){
+
+        promptText.setText("----------------- WARNING! -----------------\n\n" +
+                "The encrypted message below is what Alice currently sees. \n\n" +
+                "However, she's determined to decode your super secret message. She's decided to try decrypting the message using YOUR public key.\n");
+        messSent.setText("");
+        try {
+            encryptedMess.setText(new String(eMessage, "UTF8"));
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        }
+    }
+
+
+    private void Step23(){
+
+        promptText.setText("----------------- WARNING! -----------------\n\n" +
+                "The decryption didn't work! Alice still can't understand your message. \n\n" +
+                "However, she's still determined. She's decided to try decrypting the message again, this time using BOB'S public key.\n");
+        //decrypt message - bobs public key -> backwards decryption w/ public key == encryption
+        try {
+            eMessage = enc.encrypt(message, userKeyPair);
+            messSent.setText(new String(eMessage, "UTF8"));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void Step24(){
+
+        promptText.setText("----------------- WARNING! -----------------\n\n" +
+                "The decryption failed again! Alice has finally given up! \n\n" +
+                "It is impossible for Alice to decrypt the message without Bob's private key!\n\n");
+        //decrypt message - bobs public key -> backwards decryption w/ public key == encryption
+        try {
+            eMessage = enc.encrypt(message, bobKeyPair);
+            messSent.setText(new String(eMessage, "UTF8"));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+    }
+
+    private void Step25(){
+
+        promptText.setText("Phew! That was a close one!\n\n" +
+                "Clearly, encrypting data is crucial to keeping it out of the wrong hands!");
+
+        messSent.setText("");
+        encryptedMess.setText("");
+    }
+
+    private void Step26(){
+
+        promptText.setText("Bob is signing off!\n\n" +
+                "Hopefully you now understand how encryption works and realize its importance!\n\n" +
+                "Come back soon, " + username + "!");
+
+    }
 }

@@ -41,6 +41,18 @@ public class Encrypt {
         return new String(newPlainText, "UTF8");
     }
 
+
+    // function to decrypt a message with public keys (FOR FAIL DECRYPTION EXAMPLE)
+    // pass KeyPair to decrypt with and message in byte format to decrypt
+    // return decrypted message as a string
+    public String decrypt_pub(byte[] message, KeyPair pk) throws Exception{
+
+        cipher.init(Cipher.ENCRYPT_MODE, pk.getPublic());
+        byte[] newPlainText = cipher.doFinal(message);  //Here is where encrypted message is required in byte format for Cipher
+
+        return new String(newPlainText, "UTF8");
+    }
+
     // generate keypair
     // returns new key pair
     public KeyPair generateRSA() throws Exception{
