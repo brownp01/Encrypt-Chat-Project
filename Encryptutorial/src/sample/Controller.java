@@ -431,7 +431,7 @@ public class Controller implements Initializable {
     private void Step20(){
 
         promptText.setText("Your message has been sent to Bob!\n");
-        
+
         aMess3.setFill(Color.BLUE);
         aMess3.setText(aMess2.getText());
         aMess3.setTextAlignment(TextAlignment.RIGHT);
